@@ -1,0 +1,16 @@
+diff --git CMakeLists.txt CMakeLists.txt
+index 902e5493f..5c40aa9bb 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -1,7 +1,10 @@
+ #  minimum required cmake version: 3.1.0
+-cmake_minimum_required(VERSION 3.1.0)
++cmake_minimum_required(VERSION 4.0.0)
+ project(librealsense2 LANGUAGES CXX C)
+ 
++execute_process(COMMAND uname -m OUTPUT_VARIABLE MACHINE OUTPUT_STRIP_TRAILING_WHITESPACE)
++message(STATUS "Machine architecture: ${MACHINE}")
++find_package(Threads REQUIRED)
+ include(CMake/lrs_options.cmake)
+ include(CMake/connectivity_check.cmake)
+ #Deprecation message, should be removed in future releases
