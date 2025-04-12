@@ -23,12 +23,12 @@ class LibrealsenseAT2500 < Formula
   end
 
   # Add your patches here, after the dependencies and before the install method
-  patch do
+  patch :p1 do
     url "file://#{HOMEBREW_REPOSITORY}/Library/Taps/aabouee/homebrew-formulae/Patches/librealsense@2.50.0/cmake_patch1.patch"
     sha256 "d1e7474de95cbf7edfb65ff9b911e192f713d6f5655da8e2ee8fdc869cbaa92c"
   end
 
-  patch do
+  patch :p0 do
     url "file://#{HOMEBREW_REPOSITORY}/Library/Taps/aabouee/homebrew-formulae/Patches/librealsense@2.50.0/unix_config_patch2.patch"
     sha256 "b785f30a98b906f23fdc619961243835025e25ae1f115bc19415f71999b38d33"
   end
